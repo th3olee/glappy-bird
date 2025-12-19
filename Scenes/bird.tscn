@@ -4,12 +4,16 @@
 [ext_resource type="Script" uid="uid://pb80me00j3uv" path="res://Scripts/bird.gd" id="1_mcegt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcegt"]
+size = Vector2(25, 22)
 
 [node name="Bird" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 10
 script = ExtResource("1_mcegt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_i8bdw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 1)
 shape = SubResource("RectangleShape2D_mcegt")
