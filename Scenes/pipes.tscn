@@ -7,10 +7,19 @@ size = Vector2(44, 318)
 
 [node name="Pipes" type="StaticBody2D" groups=["pipes"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["pipes"]]
-position = Vector2(-1, 1)
+[node name="PipeDown" type="CollisionShape2D" parent="." groups=["pipes"]]
+position = Vector2(0, 271)
 shape = SubResource("RectangleShape2D_7ktcp")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" groups=["pipes"]]
+[node name="Sprite2D" type="Sprite2D" parent="PipeDown" groups=["pipes"]]
+position = Vector2(1, -1)
+texture = ExtResource("1_uhra5")
+
+[node name="PipeUp" type="CollisionShape2D" parent="." groups=["pipes"]]
+position = Vector2(0, -249)
+rotation = 3.1415927
+shape = SubResource("RectangleShape2D_7ktcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="PipeUp" groups=["pipes"]]
 position = Vector2(1, -1)
 texture = ExtResource("1_uhra5")
